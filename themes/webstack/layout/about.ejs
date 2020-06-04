@@ -1,0 +1,63 @@
+<body class="page-body boxed-container">
+  <nav class="navbar horizontal-menu navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="navbar-brand">
+        <a href="/index.html" class="logo">
+          <img src="<%= theme.logo.dark %>" width="180px" alt="" class="hidden-xs">
+          <img src="<%= theme.logo.expanded %>" width="180px" alt="" class="visible-xs">
+        </a>
+      </div>
+      <div class="navbar-mobile-clear"></div>
+      <% if (theme.githubCorner) { %>
+      <%- theme.githubCorner %>
+      <% } %>
+    </div>
+  </nav>
+  <div class="page-container">
+    <div class="main-content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <% if (theme.aboutPage && theme.aboutPage.website) { %>
+            <h4 class="text-gray"><%= theme.aboutPage.website.head %></h4>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-12">
+                  <%- theme.aboutPage.website.html %>
+                </div>
+              </div>
+            <% } else { %>
+            <div class="panel-body">
+            <% } %>
+            <% if (theme.aboutPage && theme.aboutPage.webmaster) { %>
+            <h4 class="text-gray"><%= theme.aboutPage.webmaster.head %></h4>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('<%= theme.aboutPage.webmaster.url %>', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.hclonely.com/">
+                  <div class="xe-comment-entry">
+                    <a class="xe-user-img">
+                      <img src="<%= theme.aboutPage.webmaster.img %>" class="img-circle" width="40">
+                    </a>
+                    <div class="xe-comment">
+                      <a href="#" class="xe-user-name overflowClip_1">
+                        <strong><%= theme.aboutPage.webmaster.name %></strong>
+                      </a>
+                      <p class="overflowClip_2"><%= theme.aboutPage.webmaster.description %></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <%- theme.aboutPage.webmaster.html %>
+                  </div>
+                </div>
+                <br>
+              </div>
+            </div>
+            <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
