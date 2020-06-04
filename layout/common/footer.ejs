@@ -1,0 +1,29 @@
+<footer class="main-footer sticky footer-type-1">
+  <div class="footer-inner">
+    <!-- Add your copyright text here -->
+    <div class="footer-text">
+      <% var now = new Date().getFullYear(); %>
+      &copy; <%- theme.since === now ? theme.since : (theme.since + " - " + now) %>
+      <a href="<%= theme.about.url %>"><strong>WebStack</strong></a> design by <a href="http://viggoz.com" target="_blank"><strong>Viggo</strong></a> | Power by <a href="https://hexo.io/" target="_blank"><strong>Hexo</strong></a> & <a href="https://github.com/HCLonely/hexo-theme-webstack/" target="_blank"><strong>hexo-theme-webstack</strong></a>
+    </div>
+    <div class="go-up">
+      <a href="#" rel="go-top">
+        <i class="fas fa-angle-up"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+</div>
+</div>
+<script src="<%= theme.js.bootstrap %>"></script>
+<script src="<%= theme.js.TweenMax %>"></script>
+<script src="<%= theme.js.resizeable %>"></script>
+<script src="<%= theme.js.joinable %>"></script>
+<script src="<%= theme.js.xenonApi %>"></script>
+<script src="<%= theme.js.xenonToggles %>"></script>
+<script src="<%= theme.js.xenonCustom %>"></script>
+<% if (is_home()) { %>
+<script src="<%= theme.js.lozad %>"></script>
+<% } else { %>
+<textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; padding: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; transition: none; height: 0px !important; min-height: 0px !important; font-family: Arimo, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-indent: 0px; line-height: 18.5714px; width: 53px;" class="autosizejs" id="autosizejs"></textarea>
+<% } %>

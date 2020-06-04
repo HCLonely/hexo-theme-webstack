@@ -1,0 +1,14 @@
+{
+  "name": "hexo-theme-webstack",
+  "version": "1.0.0",
+  "description": "A hexo theme based on webstack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ejslint ./layout/index.ejs"
+  },
+  "author": "HCLonely",
+  "license": "MIT",
+  "devDependencies": {
+    "ejs-lint": "^1.1.0"
+  }
+}
