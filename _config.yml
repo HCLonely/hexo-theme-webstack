@@ -27,15 +27,15 @@ menu:
       - name: 开发工具
         icon: fas fa-tools
         config: devTools
-      - name: Github
-        icon: fab fa-github
-        config: githubMenu
+      - name: 我的博客
+        icon: fas fa-blog
+        config: myBlog
 
-githubMenu:
-  - name: Github
-    url: https://github.com/
-    img: /images/logos/github.png
-    description: 面向开源及私有软件项目的托管平台。
+myBlog:
+  - name: HCLonely Blog
+    url: https://blog.hclonely.com/
+    img: /images/logos/myBlog.png
+    description: 一个懒人的博客。
 
 about:
   url: /about/
