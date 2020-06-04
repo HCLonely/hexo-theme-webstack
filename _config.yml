@@ -62,12 +62,12 @@ js:
   jquery: /js/jquery-1.11.1.min.js
   bootstrap: /js/bootstrap.min.js
   TweenMax: /js/TweenMax.min.js
-  resizeable: /js/resizeable.js
+  resizeable: /js/resizeable.min.js
   joinable: /js/joinable.js
-  xenonApi: /js/xenon-api.js
-  xenonToggles: /js/xenon-toggles.js
-  xenonCustom: /js/xenon-custom.js
-  lozad: /js/lozad.js
+  xenonApi: /js/xenon-api.min.js
+  xenonToggles: /js/xenon-toggles.min.js
+  xenonCustom: /js/xenon-custom.min.js
+  lozad: /js/lozad.min.js
   html5shiv: /js/html5shiv.min.js
   respond: /js/respond.min.js
 

@@ -22,7 +22,7 @@
       <% for( let e of theme.menu ) { %>
       <li>
         <% if (e.submenu) { %>
-        <a style="cursor: pointer;">
+        <a class="fas fa-angle-down" style="cursor: pointer;">
         <% } else { %>
         <a href="#<%= e.name %>" class="smooth">
         <% } %>
