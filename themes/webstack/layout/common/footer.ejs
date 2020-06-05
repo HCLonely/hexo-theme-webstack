@@ -15,15 +15,9 @@
 </footer>
 </div>
 </div>
-<script src="<%= theme.js.bootstrap %>"></script>
-<script src="<%= theme.js.TweenMax %>"></script>
-<script src="<%= theme.js.resizeable %>"></script>
-<script src="<%= theme.js.joinable %>"></script>
-<script src="<%= theme.js.xenonApi %>"></script>
-<script src="<%= theme.js.xenonToggles %>"></script>
-<script src="<%= theme.js.xenonCustom %>"></script>
+<%- js([theme.js.bootstrap, theme.js.TweenMax, theme.js.resizeable, theme.js.joinable, theme.js.xenonApi, theme.js.xenonToggles, theme.js.xenonCustom]) %>
 <% if (is_home()) { %>
-<script src="<%= theme.js.lozad %>"></script>
+<%- js(theme.js.lozad) %>
 <% } else { %>
 <textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; padding: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; transition: none; height: 0px !important; min-height: 0px !important; font-family: Arimo, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-indent: 0px; line-height: 18.5714px; width: 53px;" class="autosizejs" id="autosizejs"></textarea>
 <% } %>
