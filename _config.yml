@@ -51,8 +51,6 @@ aboutPage:
 
 since: 2020
 
-fonts: //fonts.loli.net/css?family=Arimo:400,700,400italic
-
 js:
   jquery: /js/jquery-1.11.1.min.js
   bootstrap: /js/bootstrap.min.js
@@ -67,6 +65,7 @@ js:
   respond: /js/respond.min.js
 
 css:
+  fonts: //fonts.loli.net/css?family=Arimo:400,700,400italic
   linecons: /css/fonts/linecons/css/linecons.min.css
   fontawesome: /css/fonts/fontawesome/css/all.min.css
   bootstrap: /css/bootstrap.min.css
