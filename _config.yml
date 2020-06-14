@@ -6,7 +6,7 @@ logo:
   collapsed: /images/logo-collapsed@2x.png
   dark: /images/logo_dark@2x.png
 
-flag: 
+flag:
   icon: flag-cn
   name: Chinese
 
@@ -26,6 +26,34 @@ menu:
         icon: fas fa-blog
         config: myBlog
 
+devTools:
+  - name: Github
+    url: https://github.com/
+    img: /images/logos/github.png
+    description: 面向开源及私有软件项目的托管平台。
+  - name: Github
+    url: https://github.com/
+    img: /images/logos/github.png
+    description: 面向开源及私有软件项目的托管平台。
+  - name: Github
+    url: https://github.com/
+    img: /images/logos/github.png
+    description: 面向开源及私有软件项目的托管平台。
+
+hotTools:
+  - name: Github
+    url: https://github.com/
+    img: /images/logos/github.png
+    description: 面向开源及私有软件项目的托管平台。
+  - name: Github
+    url: https://github.com/
+    img: /images/logos/github.png
+    description: 面向开源及私有软件项目的托管平台。
+  - name: Github
+    url: https://github.com/
+    img: /images/logos/github.png
+    description: 面向开源及私有软件项目的托管平台。
+
 myBlog:
   - name: HCLonely Blog
     url: https://blog.hclonely.com/
@@ -38,7 +66,7 @@ about:
   name: 关于本站
 
 aboutPage:
-  website: 
+  website:
     head: 关于本站
     html: '<blockquote><p>本站是hexo主题<a href="https://github.com/HCLonely/hexo-theme-webstack">hexo-theme-webstack</a>的demo站。</p></blockquote>'
   webmaster:
