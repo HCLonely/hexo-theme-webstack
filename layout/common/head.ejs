@@ -1,0 +1,37 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="viggo" />
+  <title><%= config.title %> - <%= config.subtitle %></title>
+  <meta name="keywords" content="<%= config.keywords %>">
+  <meta name="description" content="<%= config.description %>">
+  <link rel="shortcut icon" href="<%= theme.favicon %>">
+  <%- css(Object.values(theme.css)) %>
+  <%- js(theme.js.jquery) %>
+  <%- js(theme.js.header) %>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+        <%- js(theme.js.html5shiv) %>
+        <%- js(theme.js.respond) %>
+    <![endif]-->
+  <!-- / FB Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="<%= url %>">
+  <meta property="og:title" content="<%= config.title %> - <%= config.subtitle %>">
+  <meta property="og:description" content="<%= config.description %>">
+  <meta property="og:site_name" content="<%= config.title %> - <%= config.subtitle %>">
+  <% if (theme.banner) { %>
+  <meta property="og:image" content="<%= theme.banner %>">
+  <% } %>
+  <!-- / Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<%= config.title %> - <%= config.subtitle %>">
+  <meta name="twitter:description" content="<%= config.description %>">
+  <% if (theme.banner) { %>
+  <meta name="twitter:image" content="<%= theme.banner %>">
+  <% } %>
+  <% if (theme.custom && theme.custom.head) { %>
+  <%- theme.custom.head %>
+  <% } %>
+</head>

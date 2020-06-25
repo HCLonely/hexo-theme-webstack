@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="<%= config.language %>">
+
+<head>
+  <%- partial('common/head') %>
+</head>
+
+<%- body %>
+  <%- partial('common/footer') %>
+  <% if (theme.custom && theme.custom.body) { %>
+  <%- theme.custom.body %>
+  <% } %>
+</body>
+
+</html>

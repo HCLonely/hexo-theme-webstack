@@ -1,0 +1,70 @@
+<div class="sidebar-menu toggle-others fixed">
+  <div class="sidebar-menu-inner">
+    <header class="logo-env">
+      <div class="logo">
+        <a href="/index.html" class="logo-expanded">
+          <img src="<%= theme.logo.expanded %>" width="100%" alt="" />
+        </a>
+        <a href="/index.html" class="logo-collapsed">
+          <img src="<%= theme.logo.collapsed %>" width="40" alt="" />
+        </a>
+      </div>
+      <div class="mobile-menu-toggle visible-xs">
+        <a href="#" data-toggle="user-info-menu">
+          <i class="linecons-cog"></i>
+        </a>
+        <a href="#" data-toggle="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </a>
+      </div>
+    </header>
+    <ul id="main-menu" class="main-menu">
+      <% for( let e of theme.menu ) { %>
+      <li>
+        <% if (e.submenu) { %>
+        <a class="fas fa-angle-down" style="cursor: pointer;">
+          <% } else { %>
+          <a href="#<%= e.name %>" class="smooth">
+            <% } %>
+            <i class="<%= e.icon %>"></i>
+            <span class="title"><%= e.name %></span>
+          </a>
+          <% if (e.submenu) { %>
+          <ul>
+            <% e.submenu.forEach(function(e) { %>
+            <li>
+              <a href="#<%= e.name %>" class="smooth">
+                <i class="<%= e.icon %>"></i>
+                <span class="title"><%= e.name %></span>
+              </a>
+            </li>
+            <% }) %>
+          </ul>
+          <% } %>
+      </li>
+      <% } %>
+      <% if (theme.about) { %>
+      <li class="submit-tag">
+        <a href="<%= url_for(theme.about.url) %>">
+          <i class="<%= theme.about.icon %>"></i>
+          <span class="tooltip-blue"><%= theme.about.name %></span>
+        </a>
+      </li>
+      <% } %>
+      <% if (theme.busuanzi.enable && theme.busuanzi.position === 'sidebar') { %>
+      <li>
+        <a href="javascript:void(0)">
+          <i class="fas fa-eye"></i>
+          <span id="busuanzi_container_site_pv"><%- theme.busuanzi.pv.replace(/\$pv/i,'<span id="busuanzi_value_site_pv"></span>') %></span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">
+          <i class="fas fa-users"></i>
+          <span id="busuanzi_container_site_uv"><%- theme.busuanzi.uv.replace(/\$uv/i,'<span id="busuanzi_value_site_uv"></span>') %></span>
+        </a>
+      </li>
+      <% } %>
+    </ul>
+  </div>
+</div>

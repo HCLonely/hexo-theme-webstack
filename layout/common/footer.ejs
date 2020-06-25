@@ -1,0 +1,32 @@
+<footer class="main-footer sticky footer-type-1">
+  <div class="footer-inner">
+    <!-- Add your copyright text here -->
+    <p>
+      <% var now = new Date().getFullYear(); %>
+      &copy; <%- theme.since === now ? theme.since : (theme.since + " - " + now) %>
+      <a href="<%= theme.about.url %>"><strong>WebStack</strong></a> design by <a href="http://viggoz.com" target="_blank"><strong>Viggo</strong></a> | Power by <a href="https://hexo.io/" target="_blank"><strong>Hexo</strong></a> & <a href="https://github.com/HCLonely/hexo-theme-webstack/" target="_blank"><strong>hexo-theme-webstack</strong></a>
+    </p>
+    <% if (theme.busuanzi.enable && theme.busuanzi.position === 'footer') { %>
+    <p>
+      <span id="busuanzi_container_site_pv"><%- theme.busuanzi.pv.replace(/\$pv/i,'<span id="busuanzi_value_site_pv"></span>') %></span> |
+      <span id="busuanzi_container_site_uv"><%- theme.busuanzi.uv.replace(/\$uv/i,'<span id="busuanzi_value_site_uv"></span>') %></span>
+    </p>
+    <% } %>
+    <div class="go-up">
+      <a href="#" rel="go-top">
+        <i class="fas fa-angle-up"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+</div>
+</div>
+<%- js([theme.js.bootstrap, theme.js.TweenMax, theme.js.resizeable, theme.js.joinable, theme.js.xenonApi, theme.js.xenonToggles, theme.js.xenonCustom]) %>
+<% if (theme.busuanzi.enable) { %>
+<script async src="<%- theme.js.busuanzi %>"></script>
+<% } %>
+<% if (is_home()) { %>
+<%- js(theme.js.lozad) %>
+<% } else { %>
+<textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; padding: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; transition: none; height: 0px !important; min-height: 0px !important; font-family: Arimo, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-indent: 0px; line-height: 18.5714px; width: 53px;" class="autosizejs" id="autosizejs"></textarea>
+<% } %>

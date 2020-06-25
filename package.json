@@ -1,0 +1,18 @@
+{
+  "name": "hexo-theme-webstack",
+  "version": "1.1.1",
+  "description": "A hexo theme based on webstack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ejslint",
+    "mincss": "cleancss",
+    "min": "uglifyjs ./source/js/xenon-toggles.js -o ./source/js/xenon-toggles.min.js"
+  },
+  "author": "HCLonely",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^4.3.0",
+    "ejs-lint": "^1.1.0",
+    "uglify-js": "^3.9.4"
+  }
+}
