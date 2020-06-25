@@ -3,7 +3,7 @@
     <header class="logo-env">
       <div class="logo">
         <a href="/index.html" class="logo-expanded">
-          <img src="<%= theme.logo.expanded %>"  width="100%" alt="" />
+          <img src="<%= theme.logo.expanded %>" width="100%" alt="" />
         </a>
         <a href="/index.html" class="logo-collapsed">
           <img src="<%= theme.logo.collapsed %>" width="40" alt="" />
@@ -23,6 +23,7 @@
       <li>
         <% if (e.submenu) { %>
         <a class="fas fa-angle-down" style="cursor: pointer;">
+<<<<<<< HEAD
         <% } else { %>
         <a href="#<%= e.name %>" class="smooth">
         <% } %>
@@ -41,6 +42,26 @@
           <% }) %>
         </ul>
         <% } %>
+=======
+          <% } else { %>
+          <a href="#<%= e.name %>" class="smooth">
+            <% } %>
+            <i class="<%= e.icon %>"></i>
+            <span class="title"><%= e.name %></span>
+          </a>
+          <% if (e.submenu) { %>
+          <ul>
+            <% e.submenu.forEach(function(e) { %>
+            <li>
+              <a href="#<%= e.name %>" class="smooth">
+                <i class="<%= e.icon %>"></i>
+                <span class="title"><%= e.name %></span>
+              </a>
+            </li>
+            <% }) %>
+          </ul>
+          <% } %>
+>>>>>>> 9ed03df10ceb64e0bbc1a175f051dcab6456a425
       </li>
       <% } %>
       <% if (theme.about) { %>
@@ -48,6 +69,20 @@
         <a href="<%= url_for(theme.about.url) %>">
           <i class="<%= theme.about.icon %>"></i>
           <span class="tooltip-blue"><%= theme.about.name %></span>
+        </a>
+      </li>
+      <% } %>
+      <% if (theme.busuanzi.enable && theme.busuanzi.position === 'sidebar') { %>
+      <li>
+        <a href="javascript:void(0)">
+          <i class="fas fa-eye"></i>
+          <span id="busuanzi_container_site_pv"><%- theme.busuanzi.pv.replace(/\$pv/i,'<span id="busuanzi_value_site_pv"></span>') %></span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">
+          <i class="fas fa-users"></i>
+          <span id="busuanzi_container_site_uv"><%- theme.busuanzi.uv.replace(/\$uv/i,'<span id="busuanzi_value_site_uv"></span>') %></span>
         </a>
       </li>
       <% } %>
