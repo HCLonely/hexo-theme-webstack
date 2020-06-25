@@ -7,6 +7,9 @@
 
 <%- body %>
   <%- partial('common/footer') %>
+  <% if (theme.custom && theme.custom.body) { %>
+  <%- theme.custom.body %>
+  <% } %>
 </body>
 
 </html>

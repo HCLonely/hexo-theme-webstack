@@ -14,6 +14,10 @@ git clone https://github.com/HCLonely/hexo-theme-webstack themes/webstack
 
 ## Configuration
 
+Copy the `_config.yml` file in the `themes/webstack/` directory to the `rootDir/source/_data/` directory and rename it to `webstack.yml`.
+
+Configure it by editing `webstack.yml`.
+
 ### favicon
 
 > Website icon.
@@ -57,7 +61,7 @@ logo:
 
 Examples:
 ```yml
-flag: 
+flag:
   icon: flag-cn
   name: Chinese
 ```
@@ -158,7 +162,7 @@ type: 'about'
 Examples:
 ```yml
 aboutPage:
-  website: 
+  website:
     head: 关于本站
     html: '<blockquote><p>本站是hexo主题<a href="https://github.com/HCLonely/hexo-theme-webstack">hexo-theme-webstack</a>的demo站。</p></blockquote>'
   webmaster:
@@ -168,6 +172,42 @@ aboutPage:
     img: /images/logos/myblog.png
     description: 懒人一个
     html: '<br /><blockquote><p>本站是<a href="https://github.com/HCLonely">HCLonely</a>基于<a href="https://github.com/WebStackPage/WebStackPage.github.io">WebStackPage</a>项目做的一款<a href="https://hexo.io/">Hexo</a>主题。</p></blockquote>'
+```
+
+### busuanzi
+
+> Website statistics by busuanzi.
+
+- enable: Whether to enable this feature.
+- position: The number of visits is displayed, `footer` is displayed in the footer, and `sidebar` is displayed in the sidebar.
+- pv: The number of visits displayed by the traffic, `$pv` will be replaced by the number of visits.
+- uv: The number of visitors displayed, `$uv` will be replaced by the number of visitors.
+
+Examples:
+```yml
+busuanzi:
+  enable: true
+  position: sidebar
+  pv: 本站总访问量$pv
+  uv: 本站总访客数$uv
+```
+
+### custom
+
+> Customize `html` content.
+
+- head: Content inserted into the `<head></head>` tag.
+- body: Content inserted before the `</body>` tag.
+
+Examples:
+```yml
+custom:
+  head: |- # The following content is inserted into the <head></head> tag, you can set up multiple lines, pay attention to at least four spaces at the beginning of each line.
+    <link rel="stylesheet" type="text/css" href="custom.css">
+    <script src="custom.js"></script>
+  body: |- # Insert the following content before the </body> tag, you can set multiple lines, pay attention to at least four spaces at the beginning of each line.
+    <div>custom text</div>
+    <script src="custom.js"></script>
 ```
 
 ## config

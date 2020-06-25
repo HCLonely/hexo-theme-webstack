@@ -79,7 +79,23 @@ aboutPage:
 
 since: 2020
 
+busuanzi:
+  enable: true
+  position: sidebar # 'footer','sidebar'
+  pv: 本站总访问量$pv
+  uv: 本站总访客数$uv
+
+custom:
+  head: |- # 以下内容插入到<head></head>标签内，可设置多行，注意每行开头至少四个空格
+    <!-- 直接添加html内容即可 -->
+    <!-- 可设置多行 -->
+  body: |- # 以下内容插入到</body>标签之前，可设置多行，注意每行开头至少四个空格
+    <!-- 直接添加html内容即可 -->
+    <!-- 可设置多行 -->
+
 js:
+  header: /js/header.js
+  footer: /js/footer.js
   jquery: /js/jquery-1.11.1.min.js
   bootstrap: /js/bootstrap.min.js
   TweenMax: /js/TweenMax.min.js
@@ -93,6 +109,7 @@ js:
   respond: /js/respond.min.js
 
 css:
+  hclonely: /css/hclonely.css
   fonts: //fonts.loli.net/css?family=Arimo:400,700,400italic
   linecons: /css/fonts/linecons/css/linecons.min.css
   fontawesome: /css/fonts/fontawesome/css/all.min.css
