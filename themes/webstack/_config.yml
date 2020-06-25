@@ -79,8 +79,6 @@ aboutPage:
 
 since: 2020
 
-<<<<<<< HEAD
-=======
 busuanzi:
   enable: true
   position: sidebar # 'footer','sidebar'
@@ -95,7 +93,6 @@ custom:
     <!-- 直接添加html内容即可 -->
     <!-- 可设置多行 -->
 
->>>>>>> 9ed03df10ceb64e0bbc1a175f051dcab6456a425
 js:
   header: /js/header.js
   footer: /js/footer.js
@@ -110,12 +107,10 @@ js:
   lozad: /js/lozad.min.js
   html5shiv: /js/html5shiv.min.js
   respond: /js/respond.min.js
+  busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
 
 css:
-<<<<<<< HEAD
-=======
   hclonely: /css/hclonely.css
->>>>>>> 9ed03df10ceb64e0bbc1a175f051dcab6456a425
   fonts: //fonts.loli.net/css?family=Arimo:400,700,400italic
   linecons: /css/fonts/linecons/css/linecons.min.css
   fontawesome: /css/fonts/fontawesome/css/all.min.css

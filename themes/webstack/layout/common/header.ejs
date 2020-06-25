@@ -23,7 +23,6 @@
       <li>
         <% if (e.submenu) { %>
         <a class="fas fa-angle-down" style="cursor: pointer;">
-<<<<<<< HEAD
         <% } else { %>
         <a href="#<%= e.name %>" class="smooth">
         <% } %>
@@ -42,26 +41,6 @@
           <% }) %>
         </ul>
         <% } %>
-=======
-          <% } else { %>
-          <a href="#<%= e.name %>" class="smooth">
-            <% } %>
-            <i class="<%= e.icon %>"></i>
-            <span class="title"><%= e.name %></span>
-          </a>
-          <% if (e.submenu) { %>
-          <ul>
-            <% e.submenu.forEach(function(e) { %>
-            <li>
-              <a href="#<%= e.name %>" class="smooth">
-                <i class="<%= e.icon %>"></i>
-                <span class="title"><%= e.name %></span>
-              </a>
-            </li>
-            <% }) %>
-          </ul>
-          <% } %>
->>>>>>> 9ed03df10ceb64e0bbc1a175f051dcab6456a425
       </li>
       <% } %>
       <% if (theme.about) { %>
