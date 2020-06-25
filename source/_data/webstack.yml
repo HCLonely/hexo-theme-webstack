@@ -1,4 +1,4 @@
-favicon: /favicon.ico
+favicon: /images/favicon.png
 banner: /images/webstack_banner_cn.png
 
 logo:
@@ -107,6 +107,7 @@ js:
   lozad: /js/lozad.min.js
   html5shiv: /js/html5shiv.min.js
   respond: /js/respond.min.js
+  busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
 
 css:
   hclonely: /css/hclonely.css
