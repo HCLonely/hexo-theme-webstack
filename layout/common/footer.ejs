@@ -4,7 +4,7 @@
     <p>
       <% var now = new Date().getFullYear(); %>
       &copy; <%- theme.since === now ? theme.since : (theme.since + " - " + now) %>
-      <a href="<%= theme.about.url %>"><strong>WebStack</strong></a> design by <a href="http://viggoz.com" target="_blank"><strong>Viggo</strong></a> | Power by <a href="https://hexo.io/" target="_blank"><strong>Hexo</strong></a> & <a href="https://github.com/HCLonely/hexo-theme-webstack/" target="_blank"><strong>hexo-theme-webstack</strong></a>
+      <a href="javascript:void(0);"><strong><%- config.author %></strong></a> | Design by <a href="http://viggoz.com" target="_blank"><strong>Viggo</strong></a> | Power by <a href="https://hexo.io/" target="_blank"><strong>Hexo</strong></a> & <a href="https://github.com/HCLonely/hexo-theme-webstack/" target="_blank"><strong>hexo-theme-webstack</strong></a>
     </p>
     <% if (theme.busuanzi.enable && theme.busuanzi.position === 'footer') { %>
     <p>
