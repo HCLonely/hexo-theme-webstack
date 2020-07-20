@@ -12,13 +12,10 @@ git clone https://github.com/HCLonely/hexo-theme-webstack themes/webstack
 
 ## 配置
 
-<<<<<<< HEAD
-=======
 将`themes/webstack/`目录内的`_config.yml`文件复制到`博客根目录/source/_data/`目录内，并重命名为`webstack.yml`.
 
 通过编辑`webstack.yml`进行配置。
 
->>>>>>> 9ed03df10ceb64e0bbc1a175f051dcab6456a425
 ### favicon
 
 > 网站图标
@@ -53,11 +50,7 @@ logo:
   dark: /images/logo_dark@2x.png
 ```
 
-<<<<<<< HEAD
-## flag
-=======
 ### flag
->>>>>>> 9ed03df10ceb64e0bbc1a175f051dcab6456a425
 
 > 语言标识
 
@@ -66,20 +59,12 @@ logo:
 
 示例：
 ```yml
-<<<<<<< HEAD
-flag: 
-=======
 flag:
->>>>>>> 9ed03df10ceb64e0bbc1a175f051dcab6456a425
   icon: flag-cn
   name: Chinese
 ```
 
-<<<<<<< HEAD
-## githubCorner
-=======
 ### githubCorner
->>>>>>> 9ed03df10ceb64e0bbc1a175f051dcab6456a425
 
 > 右上角的 [github corner](http://tholman.com/github-corners/)
 
@@ -88,11 +73,7 @@ flag:
 githubCorner: '<a href="https://github.com/HCLonely/hexo-theme-webstack" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>'
 ```
 
-<<<<<<< HEAD
-## since
-=======
 ### since
->>>>>>> 9ed03df10ceb64e0bbc1a175f051dcab6456a425
 
 > 建站年份，显示在页面底部
 
@@ -101,11 +82,7 @@ githubCorner: '<a href="https://github.com/HCLonely/hexo-theme-webstack" class="
 since: 2020
 ```
 
-<<<<<<< HEAD
-## menu
-=======
 ### menu
->>>>>>> 9ed03df10ceb64e0bbc1a175f051dcab6456a425
 
 > **[主要]侧边栏菜单设置**
 
@@ -131,11 +108,7 @@ menu:
         config: myBlog
 ```
 
-<<<<<<< HEAD
-## about
-=======
 ### about
->>>>>>> 9ed03df10ceb64e0bbc1a175f051dcab6456a425
 
 > 侧边栏的关于本站
 
@@ -151,11 +124,7 @@ about:
   name: 关于本站
 ```
 
-<<<<<<< HEAD
-## aboutPage
-=======
 ### aboutPage
->>>>>>> 9ed03df10ceb64e0bbc1a175f051dcab6456a425
 
 > 关于页面设置
 
@@ -191,11 +160,7 @@ type: 'about'
 示例：
 ```yml
 aboutPage:
-<<<<<<< HEAD
-  website: 
-=======
   website:
->>>>>>> 9ed03df10ceb64e0bbc1a175f051dcab6456a425
     head: 关于本站
     html: '<blockquote><p>本站是hexo主题<a href="https://github.com/HCLonely/hexo-theme-webstack">hexo-theme-webstack</a>的demo站。</p></blockquote>'
   webmaster:
@@ -207,8 +172,6 @@ aboutPage:
     html: '<br /><blockquote><p>本站是<a href="https://github.com/HCLonely">HCLonely</a>基于<a href="https://github.com/WebStackPage/WebStackPage.github.io">WebStackPage</a>项目做的一款<a href="https://hexo.io/">Hexo</a>主题。</p></blockquote>'
 ```
 
-<<<<<<< HEAD
-=======
 ### busuanzi
 
 > 不蒜子统计
@@ -245,7 +208,6 @@ custom:
     <script src="custom.js"></script>
 ```
 
->>>>>>> 9ed03df10ceb64e0bbc1a175f051dcab6456a425
 ## config
 
 > [主要]网站内容设置
@@ -302,10 +264,6 @@ hotTools:
   description: 面向开源及私有软件项目的托管平台。
 ```
 
-<<<<<<< HEAD
-以上两种方式任选一种即可，建议使用第二种。
-=======
 > 以上两种方式任选一种即可，建议使用第二种。
 
 [配置详情](https://blog.hclonely.com/posts/3cd4fb34/)
->>>>>>> 9ed03df10ceb64e0bbc1a175f051dcab6456a425

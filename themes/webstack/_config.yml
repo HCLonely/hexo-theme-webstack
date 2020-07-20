@@ -57,7 +57,7 @@ hotTools:
 myBlog:
   - name: HCLonely Blog
     url: https://blog.hclonely.com/
-    img: /images/logos/myblog.png
+    img: /images/logos/myBlog.png
     description: 一个懒人的博客。
 
 about:

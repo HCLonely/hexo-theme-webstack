@@ -7,7 +7,8 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "test": "hexo clean && hexo generate && hexo server"
+    "test": "hexo clean && hexo generate && hexo server",
+    "start": "git add . && git commit -m \"Update demo site\" && git push"
   },
   "hexo": {
     "version": "4.2.1"
