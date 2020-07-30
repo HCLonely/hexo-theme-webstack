@@ -1,15 +1,28 @@
 {
   "name": "hexo-theme-webstack",
-  "version": "1.1.4",
+  "version": "2.0.0",
   "description": "A hexo theme based on webstack.",
+  "keywords": [
+    "hexo",
+    "theme",
+    "webstack"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "ejslint",
     "mincss": "cleancss",
-    "min": "uglifyjs ./source/js/xenon-toggles.js -o ./source/js/xenon-toggles.min.js"
+    "postinstall": "node ./move_config.js"
   },
-  "author": "HCLonely",
+  "author": "HCLonely <h1606051253@gmail.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HCLonely/hexo-theme-webstack/issues",
+    "email": "h1606051253@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HCLonely/hexo-theme-webstack.git"
+  },
   "devDependencies": {
     "clean-css-cli": "^4.3.0",
     "ejs-lint": "^1.1.0",

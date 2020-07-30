@@ -8,15 +8,38 @@
 
 ## Installation
 
+### hexo >= 4.0
+
 ```shell
 git clone https://github.com/HCLonely/hexo-theme-webstack themes/webstack
 ```
 
+### hexo >= 5.0
+
+```shell
+npm install hexo-theme-webstack -S
+```
+
+or
+
+```shell
+cnpm install hexo-theme-webstack -S
+```
+
 ## Configuration
+
+### hexo >= 4.0
 
 Copy the `_config.yml` file in the `themes/webstack/` directory to the `rootDir/source/_data/` directory and rename it to `webstack.yml`.
 
 Configure it by editing `webstack.yml`.
+
+### hexo >= 5.0
+
+- If this theme is newly installed, a `_config.webstack.yml` file will be generated in the root directory after the installation is complete, and you can directly edit the `_config.webstack.yml` file for configuration.
+- If it is a theme upgrade, you can use the configuration method of hexo >= 4.0, or you can move the original configuration file to the root directory and rename it to `_config.webstack.yml`.
+
+> Note: Please keep only one of `rootDir/_config.webstack.yml` and `rootDir/source/_data/webstack.yml`!
 
 ### favicon
 
