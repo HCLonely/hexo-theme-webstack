@@ -34,6 +34,7 @@
     <%- theme.githubCorner %>
     <% } %>
     </nav>
+    <% if(theme.search){ %>
     <section class="sousuo">
       <div class="search">
         <div class="search-box">
@@ -56,6 +57,7 @@
         </div>
     </section>
     <script>search()</script>
+  <% } %>
     <% theme.menu.forEach(function(e) { %>
     <% if (e.submenu) { %>
     <% e.submenu.forEach(function(e) { %>

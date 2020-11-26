@@ -381,11 +381,18 @@ body.night .search-engine-list li {
   right: 10px !important;
   position: absolute !important;
   bottom: 20px !important;
+  height: 20px;
 }
 
 body.night .go-up a {
   color: #b3b3b3 !important;
-  background-color: rgba(209, 209, 210, 0.05) !important;
+  background-color: rgb(210 211 212) !important;
+  padding: 15px 20px !important;
+  border-radius: 50% !important;
+}
+
+body.night .go-up a:hover {
+  background-color: rgb(123 123 123) !important;
 }
 
 .footer-inner #busuanzi_container_site_pv,

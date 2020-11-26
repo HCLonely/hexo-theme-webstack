@@ -89,6 +89,15 @@ flag:
   name: Chinese
 ```
 
+### search
+
+> Whether to show search box
+
+Examples:
+```yml
+search: true
+```
+
 ### githubCorner
 
 > [Github corner](http://tholman.com/github-corners/) in the upper right corner.

@@ -87,6 +87,15 @@ flag:
   name: Chinese
 ```
 
+### search
+
+> 是否显示搜索框
+
+示例：
+```yml
+search: true
+```
+
 ### githubCorner
 
 > 右上角的 [github corner](http://tholman.com/github-corners/)
