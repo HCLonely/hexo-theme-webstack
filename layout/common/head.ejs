@@ -3,35 +3,35 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="viggo" />
-  <title><%= config.title %> - <%= config.subtitle %></title>
-  <meta name="keywords" content="<%= config.keywords %>">
-  <meta name="description" content="<%= config.description %>">
-  <link rel="shortcut icon" href="<%= theme.favicon %>">
-  <%- css(Object.values(theme.css)) %>
-  <%- js(theme.js.jquery) %>
-  <%- js(theme.js.header) %>
+  <title><%= setting.tittle || config.title %> - <%= setting.subtitle || config.subtitle %></title>
+  <meta name="keywords" content="<%= setting.keywords || config.keywords %>">
+  <meta name="description" content="<%= setting.description || config.description %>">
+  <link rel="shortcut icon" href="<%= setting.favicon %>">
+  <%- css(Object.values(setting.css)) %>
+  <%- js(setting.js.jquery) %>
+  <%- js(setting.js.header) %>
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
-        <%- js(theme.js.html5shiv) %>
-        <%- js(theme.js.respond) %>
+        <%- js(setting.js.html5shiv) %>
+        <%- js(setting.js.respond) %>
     <![endif]-->
   <!-- / FB Open Graph -->
   <meta property="og:type" content="article">
   <meta property="og:url" content="<%= url %>">
-  <meta property="og:title" content="<%= config.title %> - <%= config.subtitle %>">
-  <meta property="og:description" content="<%= config.description %>">
-  <meta property="og:site_name" content="<%= config.title %> - <%= config.subtitle %>">
-  <% if (theme.banner) { %>
-  <meta property="og:image" content="<%= theme.banner %>">
+  <meta property="og:title" content="<%= setting.tittle || config.title %> - <%= setting.subtitle || config.subtitle %>">
+  <meta property="og:description" content="<%= setting.description || config.description %>">
+  <meta property="og:site_name" content="<%= setting.tittle || config.title %> - <%= setting.subtitle || config.subtitle %>">
+  <% if (setting.banner) { %>
+  <meta property="og:image" content="<%= setting.banner %>">
   <% } %>
   <!-- / Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="<%= config.title %> - <%= config.subtitle %>">
-  <meta name="twitter:description" content="<%= config.description %>">
-  <% if (theme.banner) { %>
-  <meta name="twitter:image" content="<%= theme.banner %>">
+  <meta name="twitter:title" content="<%= setting.tittle || config.title %> - <%= setting.subtitle || config.subtitle %>">
+  <meta name="twitter:description" content="<%= setting.description || config.description %>">
+  <% if (setting.banner) { %>
+  <meta name="twitter:image" content="<%= setting.banner %>">
   <% } %>
-  <% if (theme.custom && theme.custom.head) { %>
-  <%- theme.custom.head %>
+  <% if (setting.custom && setting.custom.head) { %>
+  <%- setting.custom.head %>
   <% } %>
 </head>

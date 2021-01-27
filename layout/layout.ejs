@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="<%= config.language %>">
-
+<% const setting = page ? Object.assign(theme, page) : theme %>
 <head>
-  <%- partial('common/head') %>
+  <%- partial('common/head', {setting:setting}) %>
 </head>
 
 <%- body %>
-  <%- partial('common/footer') %>
-  <% if (theme.custom && theme.custom.body) { %>
-  <%- theme.custom.body %>
+  <%- partial('common/footer', {setting:setting}) %>
+  <% if (setting.custom && setting.custom.body) { %>
+  <%- setting.custom.body %>
   <% } %>
 </body>
 

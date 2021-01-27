@@ -299,3 +299,17 @@ hotTools:
 ```
 
 Either of the above two methods can be selected. The second method is recommended.
+
+## Subpage configuration
+
+### Create subpage
+
+Use `hexo new page xxx` to create a child page, including the following descriptions, using `hexo new page child` as an example.
+
+### Modify the subpage configuration file
+
+After using the above command to generate the subpage, open the `root directory/source/child/index.md` file (subpage configuration file), and add a line `type:'child'` between the two `---` This configuration file takes effect. The sub-page uses the configuration of the homepage by default, and the sub-page preferentially uses the configuration between the two `---` sub-page configuration files. Each configuration item has the same configuration function as the homepage.
+
+See the example[https://github.com/HCLonely/hexo-theme-webstack/tree/gh-pages/source/child/index.md](https://github.com/HCLonely/hexo-theme-webstack/tree/gh-pages/source/child/index.md)
+
+> Since the subpage was basically completed a long time ago, it was later put on hold when it was busy. There may be some configuration or bugs that have been forgotten. If you have any questions, please feedback in time!

@@ -299,3 +299,17 @@ hotTools:
 > 以上两种方式任选一种即可，建议使用第二种。
 
 [配置详情](https://blog.hclonely.com/posts/3cd4fb34/)
+
+## 子页面配置
+
+### 创建子页面
+
+使用`hexo new page xxx`创建子页面，这里包括下面的说明都以`hexo new page child`为例。
+
+### 修改子页面配置文件
+
+使用上面的命令生成子页面后，打开`根目录/source/child/index.md`文件（子页面配置文件），在两个`---`之间添加一行`type: 'child'`使此配置文件生效，子页面默认使用主页的配置，子页面优先使用子页面配置文件两个`---`之间的配置，各配置项和主页的配置功能相同。
+
+示例请看[https://github.com/HCLonely/hexo-theme-webstack/tree/gh-pages/source/child/index.md](https://github.com/HCLonely/hexo-theme-webstack/tree/gh-pages/source/child/index.md)
+
+> 由于子页面在很久之前就基本做完了，后来比较忙就鸽了，可能有些配置或 bug 给忘了，有问题请及时反馈！

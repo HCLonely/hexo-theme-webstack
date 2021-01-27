@@ -1,6 +1,9 @@
+<% const isChildPage = page.type === 'child' %>
+<% const setting = isChildPage ? Object.assign(theme, page) : theme %>
+<% console.log(page.path) %>
 <body class="page-body">
 <div class="page-container">
-<%- partial('common/header') %>
+<%- partial('common/header', {setting:setting}) %>
 
 <div class="main-content">
   <nav class="navbar user-info-navbar" role="navigation">
@@ -12,12 +15,12 @@
       </li>
       <li class="dropdown hover-line language-switcher">
         <a href="/index.html" class="dropdown-toggle" data-toggle="dropdown">
-          <img src="/images/flags/<%= theme.flag.icon %>.png" alt="<%= theme.flag.icon %>" /> <%= theme.flag.name %>
+          <img src="/images/flags/<%= setting.flag.icon %>.png" alt="<%= setting.flag.icon %>" /> <%= setting.flag.name %>
         </a>
         <ul class="dropdown-menu languages">
           <li class="active">
             <a href="/index.html">
-              <img src="/images/flags/<%= theme.flag.icon %>.png" alt="<%= theme.flag.icon %>" alt="<%= theme.flag.icon %>" /> <%= theme.flag.name %>
+              <img src="/images/flags/<%= setting.flag.icon %>.png" alt="<%= setting.flag.icon %>" alt="<%= setting.flag.icon %>" /> <%= setting.flag.name %>
             </a>
           </li>
         </ul>
@@ -30,11 +33,11 @@
         </a>
       </li>
     </ul>
-    <% if (theme.githubCorner) { %>
-    <%- theme.githubCorner %>
+    <% if (setting.githubCorner) { %>
+    <%- setting.githubCorner %>
     <% } %>
     </nav>
-    <% if(theme.search){ %>
+    <% if(setting.search){ %>
     <section class="sousuo">
       <div class="search">
         <div class="search-box">
@@ -58,15 +61,23 @@
     </section>
     <script>search()</script>
   <% } %>
-    <% theme.menu.forEach(function(e) { %>
+  <% if(is_home() || isChildPage){ %>
+  <% const menuSetting = isChildPage ? page : theme; %>
+    <% menuSetting.menu.forEach(function(e) { %>
     <% if (e.submenu) { %>
     <% e.submenu.forEach(function(e) { %>
-    <% var menus = site.data && site.data[e.config] ? site.data[e.config] : theme[e.config]; %>
-    <%- partial('common/group.ejs', {e: e, menus: menus}); %>
+    <% const childPath = page.path.replace('index.html', '') + e.config; %>
+    <% const key = isChildPage?childPath:e.config; %>
+    <% var menus = site.data && site.data[key] ? site.data[key] : menuSetting[e.config]; %>
+    <%- partial('common/group.ejs', {e: e, menus: menus || []}); %>
     <% }) %>
     <% } else { %>
-    <% var menus = site.data && site.data[e.config] ? site.data[e.config] : theme[e.config]; %>
-    <%- partial('common/group.ejs', {e: e, menus: menus}); %>
+    <% const childPath = page.path.replace('index.html', '') + e.config; %>
+    <% const key = isChildPage?childPath:e.config; %>
+    <% var menus = site.data && site.data[key] ? site.data[key] : menuSetting[e.config]; %>
+    <% console.log(page.path,childPath,key); %>
+    <%- partial('common/group.ejs', {e: e, menus: menus || []}); %>
     <% } %>
     <% }) %>
-    <%- js(theme.js.footer) %>
+    <% } %>
+    <%- js(setting.js.footer) %>
