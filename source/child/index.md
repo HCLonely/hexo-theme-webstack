@@ -1,3 +1,6 @@
+<!--
+ * @Author: HCLonely
+-->
 ---
 title: 子页面
 date: 2020-12-16 21:21:24
@@ -32,6 +35,6 @@ hotTools:
 myBlog:
   - name: HCLonely Blog
     url: https://blog.hclonely.com/
-    img: /images/logos/myBlog.png
+    img: /images/logos/myblog.png
     description: 一个懒人的博客。
 ---
