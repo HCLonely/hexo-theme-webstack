@@ -6,15 +6,38 @@
 
 ## 安装
 
+### hexo >= 4.0
+
 ```shell
 git clone https://github.com/HCLonely/hexo-theme-webstack themes/webstack
 ```
 
+### hexo >= 5.0
+
+```shell
+npm install hexo-theme-webstack -S
+```
+
+or
+
+```shell
+cnpm install hexo-theme-webstack -S
+```
+
 ## 配置
+
+### hexo >= 4.0
 
 将`themes/webstack/`目录内的`_config.yml`文件复制到`博客根目录/source/_data/`目录内，并重命名为`webstack.yml`.
 
 通过编辑`webstack.yml`进行配置。
+
+### hexo >= 5.0
+
+- 如果是新安装本主题，安装完成后会在根目录生成一个`_config.webstack.yml`文件，直接编辑`_config.webstack.yml`文件进行配置即可。
+- 如果是主题升级，可以使用 hexo >= 4.0 的配置方法，也可以将原来的配置文件移动到根目录，并重命名为`_config.webstack.yml`.
+
+> 注意：`博客根目录/_config.webstack.yml`和`博客根目录/source/_data/webstack.yml`请只保留一个！
 
 ### favicon
 
@@ -62,6 +85,15 @@ logo:
 flag:
   icon: flag-cn
   name: Chinese
+```
+
+### search
+
+> 是否显示搜索框
+
+示例：
+```yml
+search: true
 ```
 
 ### githubCorner
