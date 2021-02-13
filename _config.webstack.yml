@@ -98,7 +98,6 @@ custom:
   body: |- # 以下内容插入到</body>标签之前，可设置多行，注意每行开头至少四个空格
     <!-- 直接添加html内容即可 -->
     <!-- 可设置多行 -->
-    <a href="https://beian.miit.gov.cn"><img src="/dchh/images/yumkbwan.png"><span>蜀ICP备20005665号-1</span></a>|<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src="/dchh/images/又拍云_logo5.png" height="20" width="40" ></a>
 
 js:
   header: /js/header.js
