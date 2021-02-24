@@ -1,6 +1,6 @@
 <% const isChildPage = page.type === 'child' %>
 <% const setting = isChildPage ? Object.assign(theme, page) : theme %>
-<% console.log(page.path) %>
+<%# console.log(page.path) %>
 <body class="page-body">
 <div class="page-container">
 <%- partial('common/header', {setting:setting}) %>
@@ -15,12 +15,12 @@
       </li>
       <li class="dropdown hover-line language-switcher">
         <a href="/index.html" class="dropdown-toggle" data-toggle="dropdown">
-          <img src="/images/flags/<%= setting.flag.icon %>.png" alt="<%= setting.flag.icon %>" /> <%= setting.flag.name %>
+          <img src="<%- url_for('images/flags/' + setting.flag.icon + '.png') %>" alt="<%= setting.flag.icon %>" /> <%= setting.flag.name %>
         </a>
         <ul class="dropdown-menu languages">
           <li class="active">
             <a href="/index.html">
-              <img src="/images/flags/<%= setting.flag.icon %>.png" alt="<%= setting.flag.icon %>" alt="<%= setting.flag.icon %>" /> <%= setting.flag.name %>
+              <img src="<%- url_for('images/flags/' + setting.flag.icon + '.png') %>" alt="<%= setting.flag.icon %>" alt="<%= setting.flag.icon %>" /> <%= setting.flag.name %>
             </a>
           </li>
         </ul>
