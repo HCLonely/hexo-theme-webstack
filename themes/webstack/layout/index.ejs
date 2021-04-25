@@ -1,6 +1,5 @@
 <% const isChildPage = page.type === 'child' %>
-<% const setting = isChildPage ? Object.assign(theme, page) : theme %>
-<%# console.log(page.path) %>
+<% const setting = isChildPage ? Object.assign({}, theme, page) : theme %>
 <body class="page-body">
 <div class="page-container">
 <%- partial('common/header', {setting:setting}) %>
@@ -75,7 +74,6 @@
     <% const childPath = page.path.replace('index.html', '') + e.config; %>
     <% const key = isChildPage?childPath:e.config; %>
     <% var menus = site.data && site.data[key] ? site.data[key] : menuSetting[e.config]; %>
-    <% console.log(page.path,childPath,key); %>
     <%- partial('common/group.ejs', {e: e, menus: menus || []}); %>
     <% } %>
     <% }) %>
