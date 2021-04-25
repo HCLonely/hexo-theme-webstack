@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="<%= config.language %>">
-<% const setting = page ? Object.assign(theme, page) : theme %>
+<% const setting = page ? Object.assign({}, theme, page) : theme %>
 <head>
   <%- partial('common/head', {setting:setting}) %>
 </head>

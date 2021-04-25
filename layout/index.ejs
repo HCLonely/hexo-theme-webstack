@@ -1,5 +1,5 @@
 <% const isChildPage = page.type === 'child' %>
-<% const setting = isChildPage ? Object.assign(theme, page) : theme %>
+<% const setting = isChildPage ? Object.assign({}, theme, page) : theme %>
 <%# console.log(page.path) %>
 <body class="page-body">
 <div class="page-container">
