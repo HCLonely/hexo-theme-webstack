@@ -408,3 +408,7 @@ body.night .go-up a:hover {
 .main-menu #busuanzi_value_site_uv {
   float: right;
 }
+
+.sidebar-menu .main-menu a>i{
+  width: 16px;
+}
