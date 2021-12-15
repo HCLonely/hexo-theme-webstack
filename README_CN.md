@@ -28,7 +28,7 @@ cnpm install hexo-theme-webstack -S
 
 ### hexo >= 4.0
 
-将`themes/webstack/`目录内的`_config.yml`文件复制到`博客根目录/source/_data/`目录内，并重命名为`webstack.yml`.
+将`themes/webstack/`目录内的`_config.example.yml`文件复制到`博客根目录/source/_data/`目录内，并重命名为`webstack.yml`.
 
 通过编辑`webstack.yml`进行配置。
 

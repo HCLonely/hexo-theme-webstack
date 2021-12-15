@@ -30,7 +30,7 @@ cnpm install hexo-theme-webstack -S
 
 ### hexo >= 4.0
 
-Copy the `_config.yml` file in the `themes/webstack/` directory to the `rootDir/source/_data/` directory and rename it to `webstack.yml`.
+Copy the `_config.example.yml` file in the `themes/webstack/` directory to the `rootDir/source/_data/` directory and rename it to `webstack.yml`.
 
 Configure it by editing `webstack.yml`.
 

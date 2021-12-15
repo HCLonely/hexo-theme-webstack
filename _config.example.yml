@@ -52,6 +52,8 @@ myBlog:
     img: /images/logos/myBlog.png
     description: 一个懒人的博客。
 
+expand: false
+
 about:
   url: /about/
   icon: far fa-heart

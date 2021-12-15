@@ -14,12 +14,12 @@
         </a>
       </li>
       <li class="dropdown hover-line language-switcher">
-        <a href="/index.html" class="dropdown-toggle" data-toggle="dropdown">
+        <a href="<%= url_for('/index.html') %>" class="dropdown-toggle" data-toggle="dropdown">
           <img src="<%- url_for('images/flags/' + setting.flag.icon + '.png') %>" alt="<%= setting.flag.icon %>" /> <%= setting.flag.name %>
         </a>
         <ul class="dropdown-menu languages">
           <li class="active">
-            <a href="/index.html">
+            <a href="<%= url_for('/index.html') %>">
               <img src="<%- url_for('images/flags/' + setting.flag.icon + '.png') %>" alt="<%= setting.flag.icon %>" alt="<%= setting.flag.icon %>" /> <%= setting.flag.name %>
             </a>
           </li>
@@ -41,7 +41,7 @@
     <section class="sousuo">
       <div class="search">
         <div class="search-box">
-          <span class="search-icon" style="background: url(/images/search_icon.png) 0px 0px; opacity: 1;"></span>
+          <span class="search-icon" style="background: url(<%= url_for('/images/search_icon.png') %>) 0px 0px; opacity: 1;"></span>
           <input type="text" id="txt" class="search-input" autocomplete="off" placeholder="请输入关键字，按回车 / Enter 搜索">
           <button class="search-btn" id="search-btn"><i class="fa fa-search"></i></button>
         </div>
@@ -53,13 +53,13 @@
         <div class="search-engine" style="display: none;">
           <div class="search-engine-head">
             <strong class="search-engine-tit">选择您的默认搜索引擎：</strong>
-            <div class="search-engine-tool">搜索热词： <span id="hot-btn"></span></div>
+            <div class="search-engine-tool">搜索热词： <span id="hot-btn" style="background-image: url(<%= url_for('/images/off_on.png') %>);"></span></div>
           </div>
           <ul class="search-engine-list search-engine-list_zmki_ul">
           </ul>
         </div>
     </section>
-    <script>search()</script>
+    <script>search('<%= url_for('/images/search_icon.png') %>')</script>
   <% } %>
   <% if(is_home() || isChildPage){ %>
   <% const menuSetting = isChildPage ? page : theme; %>
@@ -75,7 +75,7 @@
     <% const childPath = page.path.replace('index.html', '') + e.config; %>
     <% const key = isChildPage?childPath:e.config; %>
     <% var menus = site.data && site.data[key] ? site.data[key] : menuSetting[e.config]; %>
-    <% console.log(page.path,childPath,key); %>
+    <%# console.log(page.path,childPath,key); %>
     <%- partial('common/group.ejs', {e: e, menus: menus || []}); %>
     <% } %>
     <% }) %>

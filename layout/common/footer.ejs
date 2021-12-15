@@ -23,7 +23,7 @@
 </div>
 <%- js([setting.js.bootstrap, setting.js.TweenMax, setting.js.resizeable, setting.js.joinable, setting.js.xenonApi, setting.js.xenonToggles, setting.js.xenonCustom]) %>
 <% if (setting.busuanzi.enable) { %>
-<script async src="<%- setting.js.busuanzi %>"></script>
+<script async src="<%- url_for(setting.js.busuanzi) %>"></script>
 <% } %>
 <% if (page.type!=="about") { %>
 <%- js(setting.js.lozad) %>
