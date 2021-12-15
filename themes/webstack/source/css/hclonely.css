@@ -141,7 +141,7 @@ input::-webkit-input-placeholder{
   display: inline-block;
   width: 25px;
   height: 15px;
-  background: url('/images/off_on.png') no-repeat 0px 0px;
+  background-position: 0px 0px;
   cursor: pointer
 }
 .search-engine-tool > span.off{ background-position: -30px 0px }
@@ -407,4 +407,8 @@ body.night .go-up a:hover {
 .main-menu #busuanzi_value_site_pv,
 .main-menu #busuanzi_value_site_uv {
   float: right;
+}
+
+.sidebar-menu .main-menu a>i{
+  width: 16px;
 }

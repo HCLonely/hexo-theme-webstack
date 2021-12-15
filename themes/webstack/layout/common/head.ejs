@@ -6,7 +6,7 @@
   <title><%= setting.tittle || config.title %> - <%= setting.subtitle || config.subtitle %></title>
   <meta name="keywords" content="<%= setting.keywords || config.keywords %>">
   <meta name="description" content="<%= setting.description || config.description %>">
-  <link rel="shortcut icon" href="<%= setting.favicon %>">
+  <link rel="shortcut icon" href="<%= url_for(setting.favicon) %>">
   <%- css(Object.values(setting.css)) %>
   <%- js(setting.js.jquery) %>
   <%- js(setting.js.header) %>
