@@ -96,6 +96,35 @@ flag:
 search: true
 ```
 
+### userDefinedSearchData
+
+> 自定义搜索引擎
+
+- custom: 是否启用自定义配置
+- thisSearch: 当前搜索引擎的搜索链接
+- thisSearchIcon: 当前搜索引擎的图标链接，格式为`url(图片链接)`
+- hotStatus: 是否启用搜热词功能
+- data: 多搜索引擎配置
+  - name: 搜索引擎名字
+    img: 搜索引擎的搜索链接
+    url: 搜索引擎的图标链接，格式为`url(图片链接)`
+
+示例：
+```yml
+userDefinedSearchData:
+  custom: true
+  thisSearch: https://www.baidu.com/s?wd=
+  thisSearchIcon: url(https://www.baidu.com/favicon.ico)
+  hotStatus: true
+  data:
+    - name: 百度
+      img: url(https://www.baidu.com/favicon.ico)
+      url: https://www.baidu.com/s?wd=
+    - name: 谷歌
+      img: url(https://www.google.com/favicon.ico)
+      url: https://www.google.com/search?q=
+```
+
 ### githubCorner
 
 > 右上角的 [github corner](http://tholman.com/github-corners/)

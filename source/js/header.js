@@ -2,10 +2,11 @@ function search(searchIconUrl) {
     $(".search-icon").css("opacity", "1");
     var listIndex = -1;
     var hotList = 0;
-    var searchData = {
+    var searchData = userDefinedSearchData.custom ? userDefinedSearchData : {
         "thisSearch": "https://www.baidu.com/s?wd=",
         "thisSearchIcon": "url(" + searchIconUrl + ")",
         "hotStatus": true,
+        "custom": false,
         "data": [{
             name: "百度",
             img: "url(" + searchIconUrl + ") -80px 0px",
@@ -84,7 +85,7 @@ function search(searchIconUrl) {
         }]
     };
     var localSearchData = localStorage.getItem("searchData");
-    if (localSearchData) {
+    if (localSearchData && (searchData.custom === localSearchData.custom)) {
         searchData = JSON.parse(localSearchData)
     }
     function filterChildren(element) {
@@ -199,7 +200,7 @@ function search(searchIconUrl) {
         }, 250)
     });
     for (var i = 0; i < searchData.data.length; i++) {
-        $(".search-engine-list").append('<li><span style="background:' + searchData.data[i].img + '"/></span>' +
+        $(".search-engine-list").append('<li><span style="background:' + searchData.data[i].img + (searchData.custom ? ' 0% 0% / cover no-repeat' : '') + '"/></span>' +
             searchData.data[i].name + "</li>")
     }
     $(".search-icon, .search-engine").hover(function () {
@@ -215,13 +216,21 @@ function search(searchIconUrl) {
     searchData.hotStatus ? $("#hot-btn").removeClass("off") : $("#hot-btn").addClass("off");
     $(".search-engine-list li").click(function () {
         var index = $(this).index();
-        searchData.thisSearchIcon = searchData.data[index].position;
-        $(".search-icon").css("background-position", searchData.thisSearchIcon);
+        searchData.thisSearchIcon = searchData.custom ? searchData.data[index].img : searchData.data[index].position;
+        if (searchData.custom) {
+            $(".search-icon").css("background", searchData.thisSearchIcon + ' no-repeat').css("background-size", 'cover');
+        } else {
+            $(".search-icon").css("background-position", searchData.thisSearchIcon);
+        }
         searchData.thisSearch = searchData.data[index].url;
         $(".search-engine").css("display", "none");
         localStorage.searchData = JSON.stringify(searchData)
     });
-    $(".search-icon").css("background-position", searchData.thisSearchIcon);
+    if (searchData.custom) {
+        $(".search-icon").css("background", searchData.thisSearchIcon + ' no-repeat').css("background-size", 'cover');
+    } else {
+        $(".search-icon").css("background-position", searchData.thisSearchIcon);
+    }
     $("#search-btn").click(function () {
         var textValue = $("#txt").val();
         if (textValue) {
