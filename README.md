@@ -98,6 +98,35 @@ Examples:
 search: true
 ```
 
+### userDefinedSearchData
+
+> Custom search engine
+
+- custom: Whether to enable custom configuration
+- thisSearch: Current search engine search link
+- thisSearchIcon: Current search engine icon link, format: `url(图片链接)`
+- hotStatus: Whether to enable hot word search function
+- data: Multiple search engine configurations
+  - name: Search engine name
+    img: Search engine search link
+    url: Search engine icon link, format: `url(图片链接)`
+
+示例：
+```yml
+userDefinedSearchData:
+  custom: true
+  thisSearch: https://www.baidu.com/s?wd=
+  thisSearchIcon: url(https://www.baidu.com/favicon.ico)
+  hotStatus: true
+  data:
+    - name: 百度
+      img: url(https://www.baidu.com/favicon.ico)
+      url: https://www.baidu.com/s?wd=
+    - name: 谷歌
+      img: url(https://www.google.com/favicon.ico)
+      url: https://www.google.com/search?q=
+```
+
 ### githubCorner
 
 > [Github corner](http://tholman.com/github-corners/) in the upper right corner.
