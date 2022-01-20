@@ -15,21 +15,21 @@
       </li>
       <li class="dropdown hover-line language-switcher">
         <% const defaultFlag = Array.isArray(setting.flag) ? (setting.flag.find(flag => flag.default) || setting.flag[0]) : setting.flag; %>
-        <a href="<%= url_for('/index.html') %>" class="dropdown-toggle" data-toggle="dropdown">
+        <a href="<%= url_for(defaultFlag.index || '/index.html') %>" class="dropdown-toggle" data-toggle="dropdown">
           <img src="<%- url_for('images/flags/' + defaultFlag.icon + '.png') %>" alt="<%= defaultFlag.icon %>" /> <%= defaultFlag.name %>
         </a>
         <ul class="dropdown-menu languages">
           <% if (Array.isArray(setting.flag)) { %>
             <% setting.flag.forEach(flag => { %>
               <li class="<%= flag.default ? 'active' : '' %>">
-                <a href="<%= url_for('/index.html') %>">
+                <a href="<%= url_for(flag.index) %>">
                   <img src="<%- url_for('images/flags/' + flag.icon + '.png') %>" alt="<%= flag.icon %>" alt="<%= flag.icon %>" /> <%= flag.name %>
                 </a>
               </li>
             <% }) %>
           <% } else { %>
             <li class="active">
-              <a href="<%= url_for('/index.html') %>">
+              <a href="<%= url_for(defaultFlag.index || '/index.html') %>">
                 <img src="<%- url_for('images/flags/' + defaultFlag.icon + '.png') %>" alt="<%= defaultFlag.icon %>" alt="<%= defaultFlag.icon %>" /> <%= defaultFlag.name %>
             </a>
           </li>

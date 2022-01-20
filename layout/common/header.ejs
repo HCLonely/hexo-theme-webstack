@@ -20,7 +20,7 @@
     </header>
     <ul id="main-menu" class="main-menu">
       <% for( let e of setting.menu ) { %>
-      <li>
+      <li class="<%= (e.submenu && setting.expandAll) ? "expanded" : "" %>">
         <% if (e.submenu) { %>
         <a class="fas fa-angle-down" style="cursor: pointer;">
           <% } else { %>
@@ -30,7 +30,7 @@
             <span class="title"><%= e.name %></span>
           </a>
           <% if (e.submenu) { %>
-          <ul>
+          <ul style="display: <%= setting.expandAll ? "block" : "none" %>;">
             <% e.submenu.forEach(function(e) { %>
             <li>
               <a href="#<%= e.name %>" class="smooth">

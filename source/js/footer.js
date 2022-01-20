@@ -14,7 +14,7 @@ $(document).ready(function () {
     } else {
       $('.has-sub ul').each(function (id, ele) {
         var _that = $(this)
-        if (_this.find('ul')[0] != ele) {
+        if (_this.find('ul')[0] != ele && !expandAll) {
           setTimeout(function () {
             _that.attr("style", "")
           }, 300);

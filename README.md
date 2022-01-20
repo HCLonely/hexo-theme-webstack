@@ -77,16 +77,20 @@ logo:
 
 ### flag
 
-> 语言标识
+> Language identifier, multi-language please cooperate with [Subpage](#Subpage-configuration) use.
 
 - icon: Language icons, by default only `flag-cn` and `flag-us`, other icons please look for and store in `theme directory/source/images/flags/`.
 - name: Language name
+- default: Whether the language is the default language
+- index: The page link
 
 Examples:
 ```yml
 flag:
-  icon: flag-cn
-  name: Chinese
+  - name: Chinese
+    default: true
+    icon: flag-cn
+    index: /index.html
 ```
 
 ### search
@@ -169,6 +173,16 @@ menu:
       - name: 我的博客
         icon: fas fa-blog
         config: myBlog
+```
+
+### expandAll
+
+> Whether to expand the sidebar.
+
+示例：
+
+```yml
+expandAll: true
 ```
 
 ### about

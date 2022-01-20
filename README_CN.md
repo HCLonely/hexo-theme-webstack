@@ -75,16 +75,20 @@ logo:
 
 ### flag
 
-> 语言标识
+> 语言标识，多语言请配合[子页面](#子页面配置)使用
 
 - icon: 语言图标，默认仅有`flag-cn`和`flag-us`, 其他图标自行寻找存放于`主题目录/source/images/flags/`
 - name: 语言名称
+- default: 该语言是否为默认语言
+- index: 页面链接
 
 示例：
 ```yml
 flag:
-  icon: flag-cn
-  name: Chinese
+  - name: Chinese
+    default: true
+    icon: flag-cn
+    index: /index.html
 ```
 
 ### search
@@ -167,6 +171,16 @@ menu:
       - name: 我的博客
         icon: fas fa-blog
         config: myBlog
+```
+
+### expandAll
+
+> 是否将侧边栏全部展开
+
+示例：
+
+```yml
+expandAll: true
 ```
 
 ### about
