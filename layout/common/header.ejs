@@ -2,11 +2,11 @@
   <div class="sidebar-menu-inner">
     <header class="logo-env">
       <div class="logo">
-        <a href="/index.html" class="logo-expanded">
-          <img src="<%= setting.logo.expanded %>" width="100%" alt="" />
+        <a href="<%= url_for('/index.html') %>" class="logo-expanded">
+          <img src="<%= url_for(setting.logo.expanded) %>" width="100%" alt="" />
         </a>
-        <a href="/index.html" class="logo-collapsed">
-          <img src="<%= setting.logo.collapsed %>" width="40" alt="" />
+        <a href="<%= url_for('/index.html') %>" class="logo-collapsed">
+          <img src="<%= url_for(setting.logo.collapsed) %>" width="40" alt="" />
         </a>
       </div>
       <div class="mobile-menu-toggle visible-xs">

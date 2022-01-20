@@ -6,9 +6,10 @@
   <title><%= setting.tittle || config.title %> - <%= setting.subtitle || config.subtitle %></title>
   <meta name="keywords" content="<%= setting.keywords || config.keywords %>">
   <meta name="description" content="<%= setting.description || config.description %>">
-  <link rel="shortcut icon" href="<%= setting.favicon %>">
+  <link rel="shortcut icon" href="<%= url_for(setting.favicon) %>">
   <%- css(Object.values(setting.css)) %>
   <%- js(setting.js.jquery) %>
+  <script>var userDefinedSearchData = <%- JSON.stringify(setting.userDefinedSearchData) %>;</script>
   <%- js(setting.js.header) %>
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
