@@ -24,7 +24,7 @@
         <% if (e.submenu) { %>
         <a class="fas fa-angle-down" style="cursor: pointer;">
           <% } else { %>
-          <a href="#<%= e.name %>" class="smooth">
+          <a href="#<%= e.name.replace(/[\s]+/g, '-') %>" class="smooth">
             <% } %>
             <i class="<%= e.icon %>"></i>
             <span class="title"><%= e.name %></span>
@@ -33,7 +33,7 @@
           <ul style="display: <%= setting.expandAll ? "block" : "none" %>;">
             <% e.submenu.forEach(function(e) { %>
             <li>
-              <a href="#<%= e.name %>" class="smooth">
+              <a href="#<%= e.name.replace(/[\s]+/g, '-') %>" class="smooth">
                 <i class="<%= e.icon %>"></i>
                 <span class="title"><%= e.name %></span>
               </a>
