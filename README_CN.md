@@ -354,5 +354,43 @@ hotTools:
 使用上面的命令生成子页面后，打开`根目录/source/child/index.md`文件（子页面配置文件），在两个`---`之间添加一行`type: 'child'`使此配置文件生效，子页面默认使用主页的配置，子页面优先使用子页面配置文件两个`---`之间的配置，各配置项和主页的配置功能相同。
 
 示例请看[https://github.com/HCLonely/hexo-theme-webstack/tree/gh-pages/source/child/index.md](https://github.com/HCLonely/hexo-theme-webstack/tree/gh-pages/source/child/index.md)
+例子如下：
+---
+title: child
+date: 2023-04-18 23:35:49
+type: 'child'
+search: false
+menu:
+  - name: 常用工具
+    icon: far fa-star
+    config: hotTools
+  - name: 其他工具
+    icon: fas fa-tools
+    submenu:
+      - name: 开发工具
+        icon: fas fa-tools
+        config: devTools
+      - name: 我的博客
+        icon: fas fa-blog
+        config: myBlog
+hotTools:
+  - name: Github
+    url: https://github.com/
+    img: /images/logos/github.png
+    description: 面向开源及私有软件项目的托管平台。
+  - name: Github
+    url: https://github.com/
+    img: /images/logos/github.png
+    description: 面向开源及私有软件项目的托管平台。
+  - name: Github
+    url: https://github.com/
+    img: /images/logos/github.png
+    description: 面向开源及私有软件项目的托管平台。
+myBlog:
+  - name: HCLonely Blog
+    url: https://blog.hclonely.com/
+    img: /images/logos/myblog.png
+    description: 一个懒人的博客。
+---
 
 > 由于子页面在很久之前就基本做完了，后来比较忙就鸽了，可能有些配置或 bug 给忘了，有问题请及时反馈！
