@@ -1,0 +1,42 @@
+footer.main-footer.sticky.footer-type-1
+  .footer-inner
+    p
+      - var now = new Date().getFullYear()
+      | &copy; #{setting.since === now ? setting.since : (setting.since + " - " + now)}
+      |
+      a(href="javascript:void(0);")
+        strong= config.author
+      |  | Design by
+      a(href="http://viggoz.com", target="_blank")
+        strong Viggo
+      |  | Power by
+      a(href="https://hexo.io/", target="_blank")
+        strong Hexo
+      |  &
+      a(href="https://github.com/HCLonely/hexo-theme-webstack/", target="_blank")
+        strong hexo-theme-webstack
+
+    if setting.busuanzi.enable && setting.busuanzi.position === 'footer'
+      p
+        span#busuanzi_container_site_pv!= setting.busuanzi.pv.replace(/\$pv/i,'<span id="busuanzi_value_site_pv"></span>')
+        |  |
+        span#busuanzi_container_site_uv!= setting.busuanzi.uv.replace(/\$uv/i,'<span id="busuanzi_value_site_uv"></span>')
+
+    .go-up
+      a(href="#", rel="go-top")
+        i.fas.fa-angle-up
+
+.
+.
+
+//- 引入 JavaScript 文件
+each jsFile in [setting.js.bootstrap, setting.js.TweenMax, setting.js.resizeable, setting.js.joinable, setting.js.xenonApi, setting.js.xenonToggles, setting.js.xenonCustom]
+  script(src=jsFile)
+
+if setting.busuanzi.enable
+  script(async, src=url_for(setting.js.busuanzi))
+
+if page.type !== "about"
+  script(src=setting.js.lozad)
+else
+  textarea#autosizejs.autosizejs(tabindex="-1", style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; padding: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; transition: none; height: 0px !important; min-height: 0px !important; font-family: Arimo, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-indent: 0px; line-height: 18.5714px; width: 53px;")

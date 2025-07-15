@@ -1,0 +1,11 @@
+doctype html
+html(lang=config.language)
+  - const setting = page ? Object.assign({}, theme, page) : theme
+  head
+    include common/head
+
+  != body
+  include common/footer
+
+  if setting.custom && setting.custom.body
+    != setting.custom.body

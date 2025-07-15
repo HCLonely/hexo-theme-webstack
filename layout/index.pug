@@ -1,0 +1,81 @@
+- const isChildPage = page.type === 'child'
+- const setting = isChildPage ? Object.assign({}, theme, page) : theme
+
+body.page-body
+  .page-container
+    include common/header
+
+    .main-content
+      nav.navbar.user-info-navbar(role='navigation')
+        ul.user-info-menu.left-links.list-inline.list-unstyled
+          li.hidden-sm.hidden-xs.hover-line
+            a(href='#' data-toggle='sidebar')
+              i.fas.fa-bars
+
+          li.dropdown.hover-line.language-switcher
+            - const defaultFlag = Array.isArray(setting.flag) ? (setting.flag.find(flag => flag.default) || setting.flag[0]) : setting.flag
+            a.dropdown-toggle(href=url_for(defaultFlag.index || '/index.html') data-toggle='dropdown')
+              img(src=url_for('images/flags/' + defaultFlag.icon + '.png') alt=defaultFlag.icon)
+              = ' ' + defaultFlag.name
+
+            ul.dropdown-menu.languages
+              if Array.isArray(setting.flag)
+                each flag in setting.flag
+                  li(class=flag.default ? 'active' : '')
+                    a(href=url_for(flag.index))
+                      img(src=url_for('images/flags/' + flag.icon + '.png') alt=flag.icon)
+                      = ' ' + flag.name
+              else
+                li.active
+                  a(href=url_for(defaultFlag.index || '/index.html'))
+                    img(src=url_for('images/flags/' + defaultFlag.icon + '.png') alt=defaultFlag.icon)
+                    = ' ' + defaultFlag.name
+
+          li.switch-mode.hover-line(onclick='switchNightMode()')
+            a(href='#')
+              svg.icon(t='1593061068148' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='1681' width='16' height='16')
+                path(d='M582.4 326.4c-140.8 0-256 115.2-256 256s115.2 256 256 256 256-115.2 256-256-115.2-256-256-256z m0 448c-70.4 0-131.2-36.8-164.8-92.8 12.8 3.2 27.2 4.8 40 4.8 121.6 0 219.2-99.2 219.2-219.2 0-17.6-1.6-35.2-6.4-52.8 60.8 32 102.4 96 102.4 169.6 1.6 104-84.8 190.4-190.4 190.4zM582.4 262.4c17.6 0 32-14.4 32-32v-128c0-17.6-14.4-32-32-32s-32 14.4-32 32v128c0 17.6 14.4 32 32 32zM262.4 582.4c0-17.6-14.4-32-32-32h-128c-17.6 0-32 14.4-32 32s14.4 32 32 32h128c17.6 0 32-14.4 32-32zM310.4 356.8c6.4 6.4 14.4 9.6 22.4 9.6 8 0 16-3.2 22.4-9.6 12.8-12.8 12.8-32 0-44.8l-91.2-91.2c-12.8-12.8-32-12.8-44.8 0-12.8 12.8-12.8 32 0 44.8l91.2 91.2zM944 220.8c-12.8-12.8-32-12.8-44.8 0l-91.2 91.2c-12.8 12.8-12.8 32 0 44.8 6.4 6.4 14.4 9.6 22.4 9.6 8 0 16-3.2 22.4-9.6l91.2-91.2c12.8-12.8 12.8-33.6 0-44.8zM310.4 808l-91.2 91.2c-12.8 12.8-12.8 32 0 44.8 6.4 6.4 14.4 9.6 22.4 9.6 8 0 16-3.2 22.4-9.6l91.2-91.2c12.8-12.8 12.8-32 0-44.8-11.2-11.2-32-11.2-44.8 0z' p-id='1682' fill='#707070')
+
+        if setting.githubCorner
+          != setting.githubCorner
+
+      if setting.search
+        section.sousuo
+          .search
+            .search-box
+              span.search-icon(style='background: url(' + url_for('/images/search_icon.png') + ') 0px 0px; opacity: 1;')
+              input#txt.search-input(type='text' autocomplete='off' placeholder='请输入关键字，按回车 / Enter 搜索')
+              button#search-btn.search-btn
+                i.fa.fa-search
+
+            .box.search-hot-text#box(style='display: none;')
+              ul
+
+            .search-engine(style='display: none;')
+              .search-engine-head
+                strong.search-engine-tit 选择您的默认搜索引擎：
+                .search-engine-tool
+                  | 搜索热词：
+                  span#hot-btn(style='background-image: url(' + url_for('/images/off_on.png') + ');')
+              ul.search-engine-list.search-engine-list_zmki_ul
+
+          script
+            | search('#{url_for('/images/search_icon.png')}')
+
+      if is_home() || isChildPage
+        - const menuSetting = isChildPage ? page : theme
+        each e in menuSetting.menu
+          if e.submenu
+            each subMenu in e.submenu
+              - const childPath = page.path.replace('index.html', '') + subMenu.config
+              - const key = isChildPage ? childPath : subMenu.config
+              - var menus = site.data && site.data[key] ? site.data[key] : menuSetting[subMenu.config]
+              include common/group
+          else
+            - const childPath = page.path.replace('index.html', '') + e.config
+            - const key = isChildPage ? childPath : e.config
+            - var menus = site.data && site.data[key] ? site.data[key] : menuSetting[e.config]
+            include common/group
+
+      if setting.js && setting.js.footer
+          script(src=url_for(setting.js.footer))

@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-webstack",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "A hexo theme based on webstack.",
   "keywords": [
     "hexo",
@@ -9,8 +9,6 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "ejslint ./layout",
-    "mincss": "cleancss",
     "postinstall": "node ./move_config.js"
   },
   "author": "HCLonely <h1606051253@gmail.com>",
@@ -23,9 +21,8 @@
     "type": "git",
     "url": "https://github.com/HCLonely/hexo-theme-webstack.git"
   },
-  "devDependencies": {
-    "clean-css-cli": "^4.3.0",
-    "ejs-lint": "^0.1.1",
-    "uglify-js": "^3.9.4"
+  "dependencies": {
+    "hexo-renderer-pug": "^3.0.0",
+    "pug": "^3.0.3"
   }
 }

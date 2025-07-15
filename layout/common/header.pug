@@ -1,0 +1,44 @@
+.sidebar-menu.toggle-others.fixed
+  .sidebar-menu-inner
+    header.logo-env
+      .logo
+        a(href=url_for('/index.html')).logo-expanded
+          img(src=url_for(setting.logo.expanded), width='100%', alt='')
+        a(href=url_for('/index.html')).logo-collapsed
+          img(src=url_for(setting.logo.collapsed), width='40', alt='')
+      .mobile-menu-toggle.visible-xs
+        a(href='#', data-toggle='user-info-menu')
+          i.linecons-cog
+        a(href='#', data-toggle='mobile-menu')
+          i.fas.fa-bars
+    ul#main-menu.main-menu
+      each e in setting.menu
+        li(class=e.submenu && setting.expandAll ? 'expanded' : '')
+          if e.submenu
+            a.fas.fa-angle-down(style='cursor: pointer;')
+              i(class=e.icon)
+              span.title= e.name
+            ul(style=`display: ${setting.expandAll ? 'block' : 'none'}`)
+              each submenu in e.submenu
+                li
+                  a.smooth(href=`#${submenu.name.replace(/[\s]+/g, '-')}`)
+                    i(class=submenu.icon)
+                    span.title= submenu.name
+          else
+            a.smooth(href=`#${e.name.replace(/[\s]+/g, '-')}`)
+              i(class=e.icon)
+              span.title= e.name
+      if setting.about
+        li.submit-tag
+          a(href=url_for(setting.about.url))
+            i(class=setting.about.icon)
+            span.tooltip-blue= setting.about.name
+      if setting.busuanzi.enable && setting.busuanzi.position === 'sidebar'
+        li
+          a(href='javascript:void(0)')
+            i.fas.fa-eye
+            span#busuanzi_container_site_pv!= setting.busuanzi.pv.replace(/\$pv/i,'<span id="busuanzi_value_site_pv"></span>')
+        li
+          a(href='javascript:void(0)')
+            i.fas.fa-users
+            span#busuanzi_container_site_uv!= setting.busuanzi.uv.replace(/\$uv/i,'<span id="busuanzi_value_site_uv"></span>')
