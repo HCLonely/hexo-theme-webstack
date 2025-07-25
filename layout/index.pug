@@ -69,12 +69,12 @@ body.page-body
             each subMenu in e.submenu
               - const childPath = page.path.replace('index.html', '') + subMenu.config
               - const key = isChildPage ? childPath : subMenu.config
-              - var menus = site.data && site.data[key] ? site.data[key] : menuSetting[subMenu.config]
+              - var menus = site.data?.[key] || menuSetting[subMenu.config] || []
               include common/group
           else
             - const childPath = page.path.replace('index.html', '') + e.config
             - const key = isChildPage ? childPath : e.config
-            - var menus = site.data && site.data[key] ? site.data[key] : menuSetting[e.config]
+            - var menus = site.data?.[key] || menuSetting[e.config] || []
             include common/group
 
       if setting.js && setting.js.footer

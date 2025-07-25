@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-webstack",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A hexo theme based on webstack.",
   "keywords": [
     "hexo",
@@ -8,6 +8,9 @@
     "webstack"
   ],
   "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "postinstall": "node ./move_config.js"
   },
