@@ -10,18 +10,21 @@
 
 ```shell
 git clone https://github.com/HCLonely/hexo-theme-webstack themes/webstack
+
+# 安装依赖
+npm install hexo-renderer-pug pug --save
 ```
 
 ### hexo >= 5.0
 
 ```shell
-npm install hexo-theme-webstack -S
+npm install hexo-theme-webstack --save
 ```
 
 or
 
 ```shell
-cnpm install hexo-theme-webstack -S
+cnpm install hexo-theme-webstack --save
 ```
 
 ## 配置
