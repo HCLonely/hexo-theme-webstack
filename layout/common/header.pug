@@ -3,13 +3,13 @@
     header.logo-env
       .logo
         a(href=url_for('/index.html')).logo-expanded
-          img(src=url_for(setting.logo?.expanded), width='100%', alt='')
+          img(src=url_for(setting.logo ? setting.logo.expanded : ''), width='100%', alt='')
         a(href=url_for('/index.html')).logo-collapsed
-          img(src=url_for(setting.logo?.collapsed), width='40', alt='')
+          img(src=url_for(setting.logo ? setting.logo.collapsed : ''), width='40', alt='')
       .mobile-menu-toggle.visible-xs
-        a(href='#', data-toggle='user-info-menu')
+        a(href='javascript:void(0)', data-toggle='user-info-menu')
           i.linecons-cog
-        a(href='#', data-toggle='mobile-menu')
+        a(href='javascript:void(0)', data-toggle='mobile-menu')
           i.fas.fa-bars
     ul#main-menu.main-menu
       each e in setting.menu
@@ -33,7 +33,7 @@
           a(href=url_for(setting.about.url))
             i(class=setting.about.icon)
             span.tooltip-blue= setting.about.name
-      if setting.busuanzi.enable && setting.busuanzi.position === 'sidebar'
+      if setting.busuanzi && setting.busuanzi.enable && setting.busuanzi.position === 'sidebar'
         li
           a(href='javascript:void(0)')
             i.fas.fa-eye
