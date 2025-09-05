@@ -382,6 +382,7 @@ body.night .search-engine-list li {
   position: fixed !important;
   bottom: 20px !important;
   height: 20px;
+  z-index: 100;
 }
 
 body.night .go-up a {
